@@ -1534,10 +1534,10 @@ description. A capsule payload that contains additional bytes after the
 identified fields or a capsule payload that terminates before the end of the
 identified fields <span class="bcp14">MUST</span> be treated as a malformed or incomplete message. In
 particular, redundant length encodings <span class="bcp14">MUST</span> be verified to be self-consistent.<a href="#section-3.3-2" class="pilcrow">¶</a></p>
-<p id="section-3.3-3">If a stream carrying capsules terminates cleanly (for example, in HTTP/3 this is
-defined as receiving a QUIC STREAM frame with the FIN bit set) and the last
-capsule on the stream was truncated, this <span class="bcp14">MUST</span> be treated as a malformed or
-incomplete message.<a href="#section-3.3-3" class="pilcrow">¶</a></p>
+<p id="section-3.3-3">If the receive side of a stream carrying capsules terminates cleanly (for
+example, in HTTP/3 this is defined as receiving a QUIC STREAM frame with the FIN
+bit set) and the last capsule on the stream was truncated, this <span class="bcp14">MUST</span> be treated
+as a malformed or incomplete message.<a href="#section-3.3-3" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="hdr">
