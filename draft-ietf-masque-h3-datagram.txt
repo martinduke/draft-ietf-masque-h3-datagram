@@ -5,8 +5,8 @@
 MASQUE                                                       D. Schinazi
 Internet-Draft                                                Google LLC
 Intended status: Standards Track                               L. Pardue
-Expires: 4 October 2022                                       Cloudflare
-                                                            2 April 2022
+Expires: 6 October 2022                                       Cloudflare
+                                                            4 April 2022
 
 
                 HTTP Datagrams and the Capsule Protocol
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 October 2022.
+   This Internet-Draft will expire on 6 October 2022.
 
 Copyright Notice
 
@@ -196,11 +196,9 @@ Table of Contents
    connection error of type H3_DATAGRAM_ERROR.
 
    HTTP/3 Datagrams MUST NOT be sent unless the corresponding stream's
-   send side is open.  Once the receive side of a stream is closed,
-   incoming datagrams for this stream are no longer expected so related
-   state can be released.  State MAY be kept for a short time to account
-   for reordering.  Once the state is released, the received associated
-   datagrams MUST be silently dropped.
+   send side is open.  If a datagram is received after the corresponding
+   stream's receive side is closed, the received datagrams MUST be
+   silently dropped.
 
    If an HTTP/3 datagram is received and its Quarter Stream ID maps to a
    stream that has not yet been created, the receiver SHALL either drop
