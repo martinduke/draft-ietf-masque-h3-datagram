@@ -1532,9 +1532,9 @@ violation of these requirements <span class="bcp14">MUST</span> treat the HTTP m
 <p id="section-3.3-1">When an error occurs in processing the Capsule Protocol, the receiver <span class="bcp14">MUST</span> treat
 the message as malformed or incomplete, according to the underlying transport
 protocol. For HTTP/3, the handling of malformed messages is described in
-<span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-http-34#section-4.1.3" class="relref">Section 4.1.3</a> of [<a href="#H3" class="xref">H3</a>]</span>. For HTTP/2, the handling of
-malformed messages is described in <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-http2bis-07#section-8.1.1" class="relref">Section 8.1.1</a> of [<a href="#H2" class="xref">H2</a>]</span>. For HTTP/1.1, the handling of incomplete
-messages is described in <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-messaging-19#section-8" class="relref">Section 8</a> of [<a href="#H1" class="xref">H1</a>]</span>.<a href="#section-3.3-1" class="pilcrow">¶</a></p>
+<span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-http-34#section-4.1.3" class="relref">Section 4.1.3</a> of [<a href="#H3" class="xref">HTTP/3</a>]</span>. For HTTP/2, the handling of
+malformed messages is described in <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-http2bis-07#section-8.1.1" class="relref">Section 8.1.1</a> of [<a href="#H2" class="xref">HTTP/2</a>]</span>. For HTTP/1.1, the handling of incomplete
+messages is described in <span><a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-messaging-19#section-8" class="relref">Section 8</a> of [<a href="#H1" class="xref">HTTP/1.1</a>]</span>.<a href="#section-3.3-1" class="pilcrow">¶</a></p>
 <p id="section-3.3-2">Each capsule's payload <span class="bcp14">MUST</span> contain exactly the fields identified in its
 description. A capsule payload that contains additional bytes after the
 identified fields or a capsule payload that terminates before the end of the
@@ -1863,23 +1863,23 @@ values.<a href="#section-5.4-6" class="pilcrow">¶</a></p>
 <dl class="references">
 <dt id="DGRAM">[DGRAM]</dt>
         <dd>
-<span class="refAuthor">Pauly, T.</span>, <span class="refAuthor">Kinnear, E.</span>, and <span class="refAuthor">D. Schinazi</span>, <span class="refTitle">"An Unreliable Datagram Extension to QUIC"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-datagram-10</span>, <time datetime="2022-02-04" class="refDate">4 February 2022</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-datagram-10">https://datatracker.ietf.org/doc/html/draft-ietf-quic-datagram-10</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="H1">[H1]</dt>
-        <dd>
-<span class="refAuthor">Fielding, R. T.</span>, <span class="refAuthor">Nottingham, M.</span>, and <span class="refAuthor">J. Reschke</span>, <span class="refTitle">"HTTP/1.1"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-httpbis-messaging-19</span>, <time datetime="2021-09-12" class="refDate">12 September 2021</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-messaging-19">https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-messaging-19</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="H2">[H2]</dt>
-        <dd>
-<span class="refAuthor">Thomson, M.</span> and <span class="refAuthor">C. Benfield</span>, <span class="refTitle">"HTTP/2"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-httpbis-http2bis-07</span>, <time datetime="2022-01-24" class="refDate">24 January 2022</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-http2bis-07">https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-http2bis-07</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="H3">[H3]</dt>
-        <dd>
-<span class="refAuthor">Bishop, M.</span>, <span class="refTitle">"Hypertext Transfer Protocol Version 3 (HTTP/3)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-http-34</span>, <time datetime="2021-02-02" class="refDate">2 February 2021</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-http-34">https://datatracker.ietf.org/doc/html/draft-ietf-quic-http-34</a>&gt;</span>. </dd>
+<span class="refAuthor">Pauly, T.</span>, <span class="refAuthor">Kinnear, E.</span>, and <span class="refAuthor">D. Schinazi</span>, <span class="refTitle">"An Unreliable Datagram Extension to QUIC"</span>, <span class="seriesInfo">RFC 9221</span>, <span class="seriesInfo">DOI 10.17487/RFC9221</span>, <time datetime="2022-03" class="refDate">March 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9221">https://www.rfc-editor.org/rfc/rfc9221</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="HTTP">[HTTP]</dt>
         <dd>
 <span class="refAuthor">Fielding, R. T.</span>, <span class="refAuthor">Nottingham, M.</span>, and <span class="refAuthor">J. Reschke</span>, <span class="refTitle">"HTTP Semantics"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-httpbis-semantics-19</span>, <time datetime="2021-09-12" class="refDate">12 September 2021</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-semantics-19">https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-semantics-19</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="H1">[HTTP/1.1]</dt>
+        <dd>
+<span class="refAuthor">Fielding, R. T.</span>, <span class="refAuthor">Nottingham, M.</span>, and <span class="refAuthor">J. Reschke</span>, <span class="refTitle">"HTTP/1.1"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-httpbis-messaging-19</span>, <time datetime="2021-09-12" class="refDate">12 September 2021</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-messaging-19">https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-messaging-19</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="H2">[HTTP/2]</dt>
+        <dd>
+<span class="refAuthor">Thomson, M.</span> and <span class="refAuthor">C. Benfield</span>, <span class="refTitle">"HTTP/2"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-httpbis-http2bis-07</span>, <time datetime="2022-01-24" class="refDate">24 January 2022</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-http2bis-07">https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-http2bis-07</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="H3">[HTTP/3]</dt>
+        <dd>
+<span class="refAuthor">Bishop, M.</span>, <span class="refTitle">"Hypertext Transfer Protocol Version 3 (HTTP/3)"</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-quic-http-34</span>, <time datetime="2021-02-02" class="refDate">2 February 2021</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-quic-http-34">https://datatracker.ietf.org/doc/html/draft-ietf-quic-http-34</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="IANA-POLICY">[IANA-POLICY]</dt>
         <dd>

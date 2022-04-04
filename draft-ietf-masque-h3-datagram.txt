@@ -380,10 +380,10 @@ Table of Contents
    When an error occurs in processing the Capsule Protocol, the receiver
    MUST treat the message as malformed or incomplete, according to the
    underlying transport protocol.  For HTTP/3, the handling of malformed
-   messages is described in Section 4.1.3 of [H3].  For HTTP/2, the
-   handling of malformed messages is described in Section 8.1.1 of [H2].
-   For HTTP/1.1, the handling of incomplete messages is described in
-   Section 8 of [H1].
+   messages is described in Section 4.1.3 of [HTTP/3].  For HTTP/2, the
+   handling of malformed messages is described in Section 8.1.1 of
+   [HTTP/2].  For HTTP/1.1, the handling of incomplete messages is
+   described in Section 8 of [HTTP/1.1].
 
    Each capsule's payload MUST contain exactly the fields identified in
    its description.  A capsule payload that contains additional bytes
@@ -585,33 +585,32 @@ Table of Contents
 6.1.  Normative References
 
    [DGRAM]    Pauly, T., Kinnear, E., and D. Schinazi, "An Unreliable
-              Datagram Extension to QUIC", Work in Progress, Internet-
-              Draft, draft-ietf-quic-datagram-10, 4 February 2022,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              datagram-10>.
-
-   [H1]       Fielding, R. T., Nottingham, M., and J. Reschke,
-              "HTTP/1.1", Work in Progress, Internet-Draft, draft-ietf-
-              httpbis-messaging-19, 12 September 2021,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-
-              messaging-19>.
-
-   [H2]       Thomson, M. and C. Benfield, "HTTP/2", Work in Progress,
-              Internet-Draft, draft-ietf-httpbis-http2bis-07, 24 January
-              2022, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              httpbis-http2bis-07>.
-
-   [H3]       Bishop, M., "Hypertext Transfer Protocol Version 3
-              (HTTP/3)", Work in Progress, Internet-Draft, draft-ietf-
-              quic-http-34, 2 February 2021,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
-              http-34>.
+              Datagram Extension to QUIC", RFC 9221,
+              DOI 10.17487/RFC9221, March 2022,
+              <https://www.rfc-editor.org/rfc/rfc9221>.
 
    [HTTP]     Fielding, R. T., Nottingham, M., and J. Reschke, "HTTP
               Semantics", Work in Progress, Internet-Draft, draft-ietf-
               httpbis-semantics-19, 12 September 2021,
               <https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-
               semantics-19>.
+
+   [HTTP/1.1] Fielding, R. T., Nottingham, M., and J. Reschke,
+              "HTTP/1.1", Work in Progress, Internet-Draft, draft-ietf-
+              httpbis-messaging-19, 12 September 2021,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-
+              messaging-19>.
+
+   [HTTP/2]   Thomson, M. and C. Benfield, "HTTP/2", Work in Progress,
+              Internet-Draft, draft-ietf-httpbis-http2bis-07, 24 January
+              2022, <https://datatracker.ietf.org/doc/html/draft-ietf-
+              httpbis-http2bis-07>.
+
+   [HTTP/3]   Bishop, M., "Hypertext Transfer Protocol Version 3
+              (HTTP/3)", Work in Progress, Internet-Draft, draft-ietf-
+              quic-http-34, 2 February 2021,
+              <https://datatracker.ietf.org/doc/html/draft-ietf-quic-
+              http-34>.
 
    [IANA-POLICY]
               Cotton, M., Leiba, B., and T. Narten, "Guidelines for
