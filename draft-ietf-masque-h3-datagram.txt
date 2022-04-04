@@ -103,9 +103,9 @@ Table of Contents
 
    HTTP extensions sometimes need to access underlying transport
    protocol features such as unreliable delivery (as offered by [DGRAM])
-   to enable desirable features like an unreliable version of the
-   CONNECT method, and unreliable delivery in WebSockets [RFC6455] (or
-   its successors).
+   to enable desirable features.  For example, this could allow
+   introducing an unreliable version of the CONNECT method, or adding
+   unreliable delivery to WebSockets [RFC6455].
 
    In Section 2, this document describes HTTP Datagrams, a convention
    that supports the bidirectional and possibly multiplexed exchange of
