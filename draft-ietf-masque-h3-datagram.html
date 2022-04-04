@@ -1275,15 +1275,15 @@ and conveyed using the Capsule Protocol; see <a href="#datagram-capsule" class="
 and therefore demultiplexing is not available. Unreliable delivery is likewise
 not available. HTTP Datagrams are negotiated and conveyed using the Capsule
 Protocol; see <a href="#datagram-capsule" class="xref">Section 3.5</a>.<a href="#section-2-4" class="pilcrow">¶</a></p>
-<p id="section-2-5">HTTP Datagrams <span class="bcp14">MUST</span> only be sent with an association to a stream whose HTTP
-semantics explicitly supports HTTP Datagrams. For example, existing HTTP methods
-GET and POST do not define semantics for associated HTTP Datagrams; therefore,
-HTTP Datagrams cannot be sent associated with GET or POST request streams.<a href="#section-2-5" class="pilcrow">¶</a></p>
-<p id="section-2-6">If an HTTP Datagram associated with a method that has no known semantics for
-HTTP Datagrams is received, the receiver <span class="bcp14">MUST</span> abort the corresponding stream; if
-HTTP/3 is in use, the stream <span class="bcp14">MUST</span> be aborted with H3_DATAGRAM_ERROR. HTTP
-extensions can override these requirements by defining a negotiation mechanism
-and semantics for HTTP Datagrams.<a href="#section-2-6" class="pilcrow">¶</a></p>
+<p id="section-2-5">HTTP Datagrams <span class="bcp14">MUST</span> only be sent with an association to an HTTP request that
+explicitly supports them. For example, existing HTTP methods GET and POST do not
+define semantics for associated HTTP Datagrams; therefore, HTTP Datagrams cannot
+be sent associated with GET or POST request streams.<a href="#section-2-5" class="pilcrow">¶</a></p>
+<p id="section-2-6">If an HTTP Datagram is received and it is associated with a request that has no
+known semantics for HTTP Datagrams, the receiver <span class="bcp14">MUST</span> terminate the request; if
+HTTP/3 is in use, the request stream <span class="bcp14">MUST</span> be aborted with H3_DATAGRAM_ERROR.
+HTTP extensions can override these requirements by defining a negotiation
+mechanism and semantics for HTTP Datagrams.<a href="#section-2-6" class="pilcrow">¶</a></p>
 <div id="format">
 <section id="section-2.1">
         <h3 id="name-http-3-datagrams">
