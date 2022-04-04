@@ -1605,8 +1605,10 @@ those sent in QUIC DATAGRAM frames. In particular, the restrictions on when
 it is allowed to send an HTTP Datagram and how to process them from <a href="#format" class="xref">Section 2.1</a>
 also apply to HTTP Datagrams sent and received using the DATAGRAM capsule.<a href="#section-3.5-4" class="pilcrow">¶</a></p>
 <p id="section-3.5-5">An intermediary can reencode HTTP Datagrams as it forwards them. In other words,
-an intermediary <span class="bcp14">MAY</span> send a DATAGRAM capsule to forward an HTTP Datagram which
-was received in a QUIC DATAGRAM frame, and vice versa.<a href="#section-3.5-5" class="pilcrow">¶</a></p>
+an intermediary <span class="bcp14">MAY</span> send a DATAGRAM capsule to forward an HTTP Datagram that
+was received in a QUIC DATAGRAM frame, and vice versa. Intermediaries <span class="bcp14">MUST NOT</span>
+perform this reencoding unless they have identified the use of the Capsule
+Protocol on the corresponding request stream; see <a href="#capsule-protocol" class="xref">Section 3.2</a>.<a href="#section-3.5-5" class="pilcrow">¶</a></p>
 <p id="section-3.5-6">Note that while DATAGRAM capsules that are sent on a stream are reliably
 delivered in order, intermediaries can reencode DATAGRAM capsules into QUIC
 DATAGRAM frames when forwarding messages, which could result in loss or
