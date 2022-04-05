@@ -273,10 +273,7 @@ Table of Contents
 2.2.  HTTP Datagrams using Capsules
 
    When HTTP/3 Datagrams are unavailable or undesirable, HTTP Datagrams
-   can be sent using the Capsule Protocol, see Section 3.5.  Capsules
-   can also be used to communicate reliable and bidirectional control
-   messages associated with a datagram-based protocol even when HTTP/3
-   Datagrams are in use.
+   can be sent using the Capsule Protocol, see Section 3.5.
 
 3.  Capsules
 
@@ -293,7 +290,9 @@ Table of Contents
    request streams, even in the presence of HTTP intermediaries.  The
    Capsule Protocol can be used to exchange HTTP Datagrams, which is
    necessary when HTTP is running over a transport that does not support
-   the QUIC DATAGRAM frame.
+   the QUIC DATAGRAM frame.  The Capsule Protocol can also be used to
+   communicate reliable and bidirectional control messages associated
+   with a datagram-based protocol even when HTTP/3 Datagrams are in use.
 
 3.1.  HTTP Data Streams
 

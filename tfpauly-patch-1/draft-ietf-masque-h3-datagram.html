@@ -1406,9 +1406,7 @@ negotiate the same draft version.<a href="#section-2.1.1.1-2" class="pilcrow">¶
 <a href="#section-2.2" class="section-number selfRef">2.2. </a><a href="#name-http-datagrams-using-capsul" class="section-name selfRef">HTTP Datagrams using Capsules</a>
         </h3>
 <p id="section-2.2-1">When HTTP/3 Datagrams are unavailable or undesirable, HTTP Datagrams can be sent
-using the Capsule Protocol, see <a href="#datagram-capsule" class="xref">Section 3.5</a>. Capsules can also be used
-to communicate reliable and bidirectional control messages associated with a
-datagram-based protocol even when HTTP/3 Datagrams are in use.<a href="#section-2.2-1" class="pilcrow">¶</a></p>
+using the Capsule Protocol, see <a href="#datagram-capsule" class="xref">Section 3.5</a>.<a href="#section-2.2-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 </section>
@@ -1429,7 +1427,9 @@ can choose to use. It allows endpoints to reliably communicate request-related
 information end-to-end on HTTP request streams, even in the presence of HTTP
 intermediaries. The Capsule Protocol can be used to exchange HTTP Datagrams,
 which is necessary when HTTP is running over a transport that does not support
-the QUIC DATAGRAM frame.<a href="#section-3-2" class="pilcrow">¶</a></p>
+the QUIC DATAGRAM frame. The Capsule Protocol can also be used to communicate
+reliable and bidirectional control messages associated with a datagram-based
+protocol even when HTTP/3 Datagrams are in use.<a href="#section-3-2" class="pilcrow">¶</a></p>
 <div id="data-stream">
 <section id="section-3.1">
         <h3 id="name-http-data-streams">
