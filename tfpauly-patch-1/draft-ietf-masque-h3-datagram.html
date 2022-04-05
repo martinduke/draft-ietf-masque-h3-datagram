@@ -1235,7 +1235,7 @@ desirable features. For example, this could allow introducing an unreliable
 version of the CONNECT method, or adding unreliable delivery to WebSockets
 <span>[<a href="#RFC6455" class="xref">RFC6455</a>]</span>.<a href="#section-1-1" class="pilcrow">¶</a></p>
 <p id="section-1-2">In <a href="#datagrams" class="xref">Section 2</a>, this document describes HTTP Datagrams, a convention that
-supports bidirectional and optionally multiplexed data exchange inside an
+supports the bidirectional and optionally multiplexed exchange of data inside an
 HTTP connection. While HTTP datagrams are associated with HTTP requests, they
 are not part of message content; instead, they are intended for use by HTTP
 extensions (such as the CONNECT method), and are compatible with all versions of
@@ -1355,8 +1355,8 @@ allow communicating prioritization preferences.<a href="#section-2.1-8" class="p
           <h4 id="name-the-settings_h3_datagram-ht">
 <a href="#section-2.1.1" class="section-number selfRef">2.1.1. </a><a href="#name-the-settings_h3_datagram-ht" class="section-name selfRef">The SETTINGS_H3_DATAGRAM HTTP/3 Setting</a>
           </h4>
-<p id="section-2.1.1-1">Implementations that are willing to receive HTTP/3 Datagrams can indicate
-support to their peer by sending the SETTINGS_H3_DATAGRAM setting with a
+<p id="section-2.1.1-1">Endpoints can indicate to their peer that they are willing to receive HTTP/3
+Datagrams  by sending the SETTINGS_H3_DATAGRAM setting with a
 value of 1.<a href="#section-2.1.1-1" class="pilcrow">¶</a></p>
 <p id="section-2.1.1-2">The value of the SETTINGS_H3_DATAGRAM setting <span class="bcp14">MUST</span> be either 0 or 1. A value
 of 0 indicates that the implementation is not willing to receive HTTP Datagrams.
@@ -1376,7 +1376,7 @@ or equal to the stored value; if not, the client <span class="bcp14">MUST</span>
 with error H3_SETTINGS_ERROR. In all cases, the maximum permitted value of the
 SETTINGS_H3_DATAGRAM setting parameter is 1.<a href="#section-2.1.1-4" class="pilcrow">¶</a></p>
 <p id="section-2.1.1-5">It is <span class="bcp14">RECOMMENDED</span> that implementations that support receiving HTTP/3 Datagrams
-using QUIC always send the SETTINGS_H3_DATAGRAM setting with a value of 1,
+always send the SETTINGS_H3_DATAGRAM setting with a value of 1,
 even if the application does not intend to use HTTP/3 Datagrams. This helps to
 avoid "sticking out"; see <a href="#security" class="xref">Section 4</a>.<a href="#section-2.1.1-5" class="pilcrow">¶</a></p>
 <div id="note-about-draft-versions">
